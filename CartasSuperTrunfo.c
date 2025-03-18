@@ -17,6 +17,8 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    
+    // Insere dados da carta 1
     char estado1;
     char codigo1[5];
     char cidade1[50];
@@ -24,9 +26,6 @@ int main() {
     float area1;
     float pib1;
     int PontoTuristico1 = 0;
-    
-
-    // Insere dados da carta 
 
     printf("Informe o Estado: ");
     scanf(" %c", &estado1);
