@@ -10,6 +10,7 @@ int main(){
     int PontoTuristico1 = 0;
     float DensidadePopulacional1 = 0;
     float pibPCapita1;
+    float superPoder1;
 
     // Insere dados da carta 
 
@@ -37,6 +38,8 @@ int main(){
     DensidadePopulacional1 = (float) populacao1 / area1;
     pibPCapita1 = pib1 / (float) populacao1;
 
+    superPoder1 = (float) populacao1 + area1 + pib1 + (float) PontoTuristico1 + pibPCapita1 + (1/DensidadePopulacional1);
+
     // Insere dados da carta 2
     char estado2;
     char codigo2[5];
@@ -47,6 +50,8 @@ int main(){
     int PontoTuristico2 = 0;
     float DensidadePopulacional2 = 0;
     float pibPCapita2;
+    float superPoder2;
+
 
     printf("Informe o Estado: ");
     scanf(" %c", &estado2);
@@ -71,6 +76,8 @@ int main(){
 
     DensidadePopulacional2 = (float) populacao2 / area2;
     pibPCapita2 = pib2 / (float) populacao2;
+    superPoder2 = (float) populacao2 + area2 + pib2 + (float) PontoTuristico2 + pibPCapita2 + (1/DensidadePopulacional2);
+
 
     // Exibe os dados inseridos da carta 1 e 2
 
@@ -84,6 +91,8 @@ int main(){
     printf("Número de Pontos Turísticos: %d \n", PontoTuristico1);
     printf("Densidade Populacional: %.2f hab/km² \n", DensidadePopulacional1);
     printf("PIB per capita: %.2f reais \n", pibPCapita1);
+    printf("O Super Poder é: %.2f \n", superPoder1);
+
 
     printf("Carta 2 \n");
     printf("Estado: %c \n", estado2);
@@ -95,6 +104,60 @@ int main(){
     printf("Número de Pontos Turísticos: %d \n", PontoTuristico2); 
     printf("Densidade Populacional: %.2f hab/km2 \n", DensidadePopulacional2);
     printf("PIB per capita: %.2f reais \n", pibPCapita2); 
+    printf("O Super Poder é: %.2f \n", superPoder2);
+
+    printf("**************************************************************** \n");
+    printf("***************       Resultados               ***************** \n");
+    printf("População: ");
+    if (populacao1>populacao2) {
+        printf("Carta 1 venceu (%d) \n", populacao1>populacao2);
+    } else {
+        printf("Carta 2 venceu (%d) \n", populacao1>populacao2);
+    }
+
+    printf("Área: ");
+    if (area1>area2) {
+        printf("Carta 1 venceu (%d) \n", area1>area2);
+    } else {
+        printf("Carta 2 venceu (%d) \n", area1>area2);
+    }
+
+    printf("PIB: ");
+    if (pib1>pib2) {
+        printf("Carta 1 venceu (%d) \n", pib1>pib2);
+    } else {
+        printf("Carta 2 venceu (%d) \n", pib1>pib2);
+    }
+    
+    printf("Pontos Turisticos: ");
+    if (PontoTuristico1>PontoTuristico2) {
+        printf("Carta 1 venceu (%d) \n", PontoTuristico1>PontoTuristico2);
+    } else {
+        printf("Carta 2 venceu (%d) \n", PontoTuristico1>PontoTuristico2);
+    }
+
+    printf("Densidade Populacional: ");
+    if (DensidadePopulacional1>DensidadePopulacional2) {
+        printf("Carta 1 venceu (%d) \n", DensidadePopulacional1>DensidadePopulacional2);
+    } else {
+        printf("Carta 2 venceu (%d) \n", DensidadePopulacional1>DensidadePopulacional2);
+    }
+
+    printf("PIB per capita: ");
+    if (pibPCapita1<pibPCapita2) {
+        printf("Carta 1 venceu (%d) \n", pibPCapita1>pibPCapita2);
+    } else {
+        printf("Carta 2 venceu (%d) \n", pibPCapita1>pibPCapita2);
+    }
+
+    printf("Super Poder: ");
+    if (superPoder1>superPoder2) {
+        printf("Carta 1 venceu (%d) \n", superPoder1>superPoder2);
+    } else {
+        printf("Carta 2 venceu (%d) \n", superPoder1>superPoder2);
+    }
+    printf("***************                                ***************** \n");
+    printf("**************************************************************** \n");
 
     return 0;
 }
