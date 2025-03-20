@@ -1,24 +1,6 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    
-    // Insere dados da carta 1
+int main(){
     char estado1;
     char codigo1[5];
     char cidade1[50];
@@ -26,6 +8,10 @@ int main() {
     float area1;
     float pib1;
     int PontoTuristico1 = 0;
+    float DensidadePopulacional1 = 0;
+    float pibPCapita1;
+
+    // Insere dados da carta 
 
     printf("Informe o Estado: ");
     scanf(" %c", &estado1);
@@ -48,6 +34,9 @@ int main() {
     printf("Informe a quantidade de ponto turistico: ");
     scanf("%d", &PontoTuristico1);
 
+    DensidadePopulacional1 = (float) populacao1 / area1;
+    pibPCapita1 = pib1 / (float) populacao1;
+
     // Insere dados da carta 2
     char estado2;
     char codigo2[5];
@@ -56,6 +45,8 @@ int main() {
     float area2;
     float pib2;
     int PontoTuristico2 = 0;
+    float DensidadePopulacional2 = 0;
+    float pibPCapita2;
 
     printf("Informe o Estado: ");
     scanf(" %c", &estado2);
@@ -78,6 +69,9 @@ int main() {
     printf("Informe a quantidade de ponto turistico: ");
     scanf("%d", &PontoTuristico2);
 
+    DensidadePopulacional2 = (float) populacao2 / area2;
+    pibPCapita2 = pib2 / (float) populacao2;
+
     // Exibe os dados inseridos da carta 1 e 2
 
     printf("Carta 1 \n");
@@ -88,6 +82,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais \n", pib1);
     printf("Número de Pontos Turísticos: %d \n", PontoTuristico1);
+    printf("Densidade Populacional: %.2f hab/km² \n", DensidadePopulacional1);
+    printf("PIB per capita: %.2f reais \n", pibPCapita1);
 
     printf("Carta 2 \n");
     printf("Estado: %c \n", estado2);
@@ -96,7 +92,9 @@ int main() {
     printf("População: %d \n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais \n", pib2);
-    printf("Número de Pontos Turísticos: %d \n", PontoTuristico2);  
+    printf("Número de Pontos Turísticos: %d \n", PontoTuristico2); 
+    printf("Densidade Populacional: %.2f hab/km2 \n", DensidadePopulacional2);
+    printf("PIB per capita: %.2f reais \n", pibPCapita2); 
 
     return 0;
 }
